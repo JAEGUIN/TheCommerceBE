@@ -23,11 +23,7 @@ http://localhost:8080/swagger-ui.html#/
 | 기능 설명 | 입력된 정보를 기반으로 회원 정보를 데이터베이스에 저장합니다. |
 | url | /api/user/join |
 | 접근방식 | POST |
-| 요청 파라미터 | 회원id비밀번호
-닉네임
-이름
-전화번호
-이메일주소 |
+| 요청 파라미터 | 회원id비밀번호, 닉네임, 이름, 전화번호, 이메일주소 |
 | 응답 | 정상 동작한 경우 응답코드 201 |
 
 
@@ -41,9 +37,9 @@ http://localhost:8080/swagger-ui.html#/
 | 기능 설명 | 입력된 회원들의 정보를 목록으로 조회합니다. |
 | url | /api/user/list |
 | 접근방식 | GET |
-| 요청 파라미터 | 쿼리스트링 방식으로 요청합니다.page : 페이지 번호
-pageSize : 한 페이지에 표시될 수 있는 최대 회원 수
-sort: 가입일 순 / 이름순 |
+| 요청 파라미터 | 쿼리스트링 방식으로 요청 | 
+| ex1 | http://localhost:8080/api/user/list?page=1&pageSize=10&sortBy=name&sortDirection=desc |
+| ex2 | | http://localhost:8080/api/user/list?page=1&pageSize=10&sortBy=regiTime&sortDirection=asc |
 | 응답 | 정상 동작한 경우 응답코드 200프론트에서 paging 처리를 할 수 있는 적절한 형태의 응답 |
 
 
@@ -56,8 +52,6 @@ sort: 가입일 순 / 이름순 |
 | --- | --- |
 | 기능 설명 | 해당하는 아이디를 가진 회원의 정보가 수정됩니다. |
 | url | /api/user/{로그인아이디} |
-| 접근방식 |  |
-| 요청 파라미터 |  |
 | 응답 | 변경 내역을 확인할 수 있는 적절한 형태의 응답 |
 
 
