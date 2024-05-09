@@ -12,5 +12,5 @@ public interface UserRepository extends JpaRepository<User, Long> {
     Optional<User> findUserById(@Param("id") String id);
 
     @Query("SELECT count(u) FROM User u WHERE u.id = :id")
-    int findUserByIdString(String id);
+    int findUserCountById(String id);
 }

@@ -27,7 +27,7 @@ public class UserService {
     public void regiUser(RegiUserDTO dto) {
         try{
             logger.info("save start");
-            int userId = repository.findUserByIdString(dto.getId());
+            int userId = repository.findUserCountById(dto.getId());
             if(userId>0){
                 throw new Exception("이미 존재하는 id 입니다.");
             }else {
