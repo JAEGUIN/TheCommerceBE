@@ -3,8 +3,11 @@
 더 커머스 백엔드 개발자 기술 과제 restful api 백엔드 서버
 
 언어 : jdk1.8 (java8)
+
 프레임워크 : java spring boot 2.6.8
+
 db매핑 : spring jpa
+
 db : h2
 
 Swagger 주소 :
